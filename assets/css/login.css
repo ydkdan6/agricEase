@@ -1,7 +1,8 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 .form {
     display: flex;
@@ -15,41 +16,17 @@
   }
   
   .title {
-    font-size: 28px;
-    color: royalblue;
+    color: rgb(8, 77, 17);
     font-weight: 600;
     letter-spacing: -1px;
     position: relative;
     display: flex;
     align-items: center;
-    padding-left: 30px;
+    padding-left: 2px;
   }
-  
-  .title::before,.title::after {
-    position: absolute;
-    content: "";
-    height: 16px;
-    width: 16px;
-    border-radius: 50%;
-    left: 0px;
-    background-color: royalblue;
-  }
-  
-  .title::before {
-    width: 18px;
-    height: 18px;
-    background-color: royalblue;
-  }
-  
-  .title::after {
-    width: 18px;
-    height: 18px;
-    animation: pulse 1s linear infinite;
-  }
-  
   .message, .signin {
     color: rgba(88, 87, 87, 0.822);
-    font-size: 14px;
+    font-size: 16px;
   }
   
   .signin {
@@ -57,11 +34,11 @@
   }
   
   .signin a {
-    color: royalblue;
+    color: rgb(8, 77, 17)
   }
   
   .signin a:hover {
-    text-decoration: underline royalblue;
+    text-decoration: underline rgb(8, 77, 17);
   }
   
   .flex {
@@ -108,9 +85,9 @@
   }
   
   .submit {
-    border: none;
+    border: 1px solid rgb(8, 77, 17);
     outline: none;
-    background-color: royalblue;
+    background-color: rgb(8, 77, 17);
     padding: 10px;
     border-radius: 10px;
     color: #fff;
@@ -119,17 +96,8 @@
   }
   
   .submit:hover {
-    background-color: rgb(56, 90, 194);
+    background-color: #fff;
+    color: rgb(8, 77, 17);
   }
   
-  @keyframes pulse {
-    from {
-      transform: scale(0.9);
-      opacity: 1;
-    }
   
-    to {
-      transform: scale(1.8);
-      opacity: 0;
-    }
-  }
