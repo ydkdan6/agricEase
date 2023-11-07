@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
@@ -14,12 +13,24 @@
 
     <!--Login Style Link-->
     <link rel="stylesheet" href="assets/css/login.css" />
-    <title>AgricEase</title>
+    <title>Sign-Up- AgricEase</title>
 </head>
 <body>
     <form class="form">
-        <p class="title text-3xl">Welcome to AgricEase</p>
-        <p class="message">Log in and get full access to AgricEase. </p>
+        <p class="title text-3xl">Register</p>
+        <p class="message">Signup and get full access to AgricEase. </p>
+            <div class="flex">
+            <label>
+                <input required="" placeholder="" type="text" class="input" name="fName">
+                <span>Firstname</span>
+            </label>
+    
+            <label>
+                <input required="" placeholder="" type="text" class="input" name="lName">
+                <span>Lastname</span>
+            </label>
+        </div>  
+                
         <label>
             <input required="" placeholder="" type="email" class="input" name="email">
             <span>Email</span>
@@ -29,8 +40,12 @@
             <input required="" placeholder="" type="password" class="input" name="password">
             <span>Password</span>
         </label>
-        <button class="submit">Log In</button>
-        <p class="signin">Don't have an acount ? <a href="signUp.html" class="decoration-0">SignUp</a> </p>
+        <label>
+            <input required="" placeholder="" type="password" class="input" name="confirmPassword">
+            <span>Confirm password</span>
+        </label>
+        <button class="submit">Submit</button>
+        <p class="signin">Already have an acount ? <a href="index.html">Signin</a> </p>
     </form>
 </body>
 </html>
