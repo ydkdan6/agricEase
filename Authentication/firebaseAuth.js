@@ -31,7 +31,9 @@ document.addEventListener('DOMContentLoaded', function () {
     evt.preventDefault();
     createUserWithEmailAndPassword(auth, email.value, password.value)
     .then((credentials) =>{
-      console.log(credentials)
+      const user = credentials.user;
+      console.log(user);
+      alert(user.fName +" "+ user.lName + " Registration Sucessful!");
     })
     .catch((error) => {
       alert(error.message);
