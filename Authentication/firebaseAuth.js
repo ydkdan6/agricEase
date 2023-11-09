@@ -43,3 +43,4 @@ document.addEventListener('DOMContentLoaded', function () {
   form.addEventListener('submit', RegisterUser);
 
 })
+
