@@ -8,7 +8,7 @@
     <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
+    <!--<link rel="manifest" href="/site.webmanifest"> -->
     <!-- Tailwind Styles Link-->
     <link rel="stylesheet" href="css/main.css" />
 
@@ -17,20 +17,21 @@
     <title>AgricEase</title>
 </head>
 <body>
-    <form class="form">
+    <form class="form" >
         <p class="title text-3xl">Welcome to AgricEase</p>
         <p class="message">Log in and get full access to AgricEase. </p>
         <label>
-            <input required="" placeholder="" type="email" class="input" name="email">
+            <input required="" placeholder="" type="email" class="input" id="email" name="email">
             <span>Email</span>
         </label> 
             
         <label>
-            <input required="" placeholder="" type="password" class="input" name="password">
+            <input required="" placeholder="" type="password" class="input" id="password" name="password">
             <span>Password</span>
         </label>
-        <button class="submit">Log In</button>
+        <button class="submit" id="login">Log In</button>
         <p class="signin">Don't have an acount ? <a href="signUp.html" class="decoration-0">SignUp</a> </p>
     </form>
 </body>
+
 </html>

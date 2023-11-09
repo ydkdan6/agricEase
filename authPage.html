@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <!-- Tailwind Styles Link-->
+    <link rel="stylesheet" href="css/main.css" />
+    <!--Login Style Link-->
+    <link rel="stylesheet" href="assets/css/login.css" />
+    <title>Document</title>
+</head>
+<body>
+    <!-- Email Authentication Page -->
+    <form class="form" id="form1" method="post" style="display: block;">
+        <p class="title text-3xl">Verification Page</p>
+        <p class="message">Kindly input your email or phone number </p>
+        <label>
+            <input required="" placeholder="" type="email" class="input" name="email">
+            <span>Email</span>
+        </label> 
+        <button class="submit" style="margin: 10px;" id="email-verification">Verify Email</button>
+        <p class="signin" id="switch-to-number">Or Use <a class="decoration-0">Phone Number</a> </p>
+    </form>
+
+    <!--Phone Number Authentication Page -->
+    <form class="form hidden" id="form2" method="post" style="display: none;">
+        <p class="title text-3xl">Verification Page</p>
+        <p class="message">Kindly input your email or phone number </p>
+        <label>
+            <input required="" placeholder="" type="email" class="input" name="email">
+            <span>Email</span>
+        </label> 
+        <button class="submit mt-6" id="phone-verification" style="margin: 10px;">Verify Phone Number</button>
+        <p class="signin" id="switch-to-email">Or Use <a class="decoration-0 cursor-pointer">Email</a> </p>
+    </form>
+</body>
+<script src="Authentication/toggleAuth.js"></script>
+</html>

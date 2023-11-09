@@ -7,7 +7,7 @@
     <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
+   <!-- <link rel="manifest" href="/site.webmanifest"> -->
     <!-- Tailwind Styles Link-->
     <link rel="stylesheet" href="css/main.css" />
 
@@ -16,36 +16,37 @@
     <title>Sign-Up- AgricEase</title>
 </head>
 <body>
-    <form class="form">
+    <form class="form" method="post" id="mainForm">
         <p class="title text-3xl">Register</p>
         <p class="message">Signup and get full access to AgricEase. </p>
             <div class="flex">
             <label>
-                <input required="" placeholder="" type="text" class="input" name="fName">
+                <input required="" placeholder="" type="text" id="fName" class="input" name="fName">
                 <span>Firstname</span>
             </label>
     
             <label>
-                <input required="" placeholder="" type="text" class="input" name="lName">
+                <input required="" placeholder="" type="text" id="lName" class="input" name="lName">
                 <span>Lastname</span>
             </label>
         </div>  
                 
         <label>
-            <input required="" placeholder="" type="email" class="input" name="email">
+            <input required="" placeholder="" type="email" class="input" id="email" name="email">
             <span>Email</span>
         </label> 
             
         <label>
-            <input required="" placeholder="" type="password" class="input" name="password">
+            <input required="" placeholder="" type="password" class="input" id="password" name="password">
             <span>Password</span>
         </label>
         <label>
             <input required="" placeholder="" type="password" class="input" name="confirmPassword">
             <span>Confirm password</span>
         </label>
-        <button class="submit">Submit</button>
+        <button class="submit"><a href="authPage.html" style="text-decoration: none;" id="register">Submit</a></button>
         <p class="signin">Already have an acount ? <a href="index.html">Signin</a> </p>
     </form>
 </body>
+<script type="module" src="Authentication/firebaseAuth.js"></script>
 </html>

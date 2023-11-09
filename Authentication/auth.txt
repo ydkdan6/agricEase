@@ -1,0 +1,81 @@
+//type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.5.2/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.5.2/firebase-analytics.js";
+  import {getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut} from "https://www.gstatic.com/firebasejs/10.5.2/firebase-auth.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyBnzEef5Pz0rUMypJ9k4lBHQpgkdtumVvs",
+    authDomain: "agricease-auth.firebaseapp.com",
+    projectId: "agricease-auth",
+    storageBucket: "agricease-auth.appspot.com",
+    messagingSenderId: "533708480645",
+    appId: "1:533708480645:web:5cd0eabb38234671c489ec",
+    measurementId: "G-FLS1G2N4HX"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+  const auth = getAuth();
+
+  //Registration code auth
+const register =  document.getElementById('register');
+if (register) {
+    register.addEventListener("click", function(){
+
+        var fName = document.getElementById('fName').value;
+        var lName = document.getElementById('fName').value;
+        var email = document.getElementById('email').value;
+        var password = document.getElementById('password').value;
+        
+
+    //For New Registration
+    createUserWithEmailAndPassword(auth, fName, lName, email, password)
+    .then((userCredential) => {
+        //Signed in
+        const user = userCredential.user;
+        console.log(user);
+        alert("Registration Successfully!!");
+        //...
+    })
+    .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        //...
+        console.log(errorMessage);
+        alert(error);
+    });
+  });
+}
+  //...End
+
+  //..Login Authentication
+
+const login = document.getElementById('login');
+
+if(login){
+    login.addEventListener("click", function(){
+        var email = document.getElementById('email').value;
+        var password = document.getElementById('password').value;
+
+    signInWithEmailAndPassword(auth, email, password)
+    .then((userCredential) => {
+        const user = userCredential.user;
+        console.log(user);
+        alert(user.email + "Login Successfullyy!!");
+    })
+
+    .catch((error) => {
+
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        console.log(errorMessage);
+        alert(errorMessage);
+    });
+  });
+}
