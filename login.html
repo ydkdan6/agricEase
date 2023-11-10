@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <!--<link rel="manifest" href="/site.webmanifest"> -->
+    <!-- Tailwind Styles Link-->
+    <link rel="stylesheet" href="css/main.css" />
+
+ <!-- fonts -->
+ <link rel="preconnect" href="https://fonts.gstatic.com/">
+ <link href="https://fonts.googleapis.com/css2?family=Handlee&amp;family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet">
+
+
+    <!--Login Style Link-->
+    <link rel="stylesheet" href="assets/css/login.css" />
+    <title>AgricEase</title>
+</head>
+<body>
+    <form class="form" method="post" id="mainForm" >
+        <p class="title text-3xl">Welcome to AgricEase</p>
+        <p class="message">Log in and get full access to AgricEase. </p>
+        <label>
+            <input required="" placeholder="" type="email" class="input" id="email" name="email">
+            <span>Email</span>
+        </label> 
+            
+        <label>
+            <input required="" placeholder="" type="password" class="input" id="password" name="password">
+            <span>Password</span>
+        </label>
+        <label>Show Password <input type="checkbox" id="checkVisible"/></label>
+        <button class="submit" id="login">Log In</button>
+        <p class="signin">Don't have an acount ? <a href="signUp.html" class="decoration-0">SignUp</a> </p>
+    </form>
+</body>
+    <script type="module" src="Authentication/login.js"></script>
+    <script src="assets/js/index.js"></script>
+</html>
