@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <!--<link rel="manifest" href="/site.webmanifest"> -->
+    <!-- Tailwind Styles Link-->
+    <link rel="stylesheet" href="css/main.css" />
+
+    <!-- Animate style CDN-->
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+
+ <!-- fonts -->
+ <link rel="preconnect" href="https://fonts.gstatic.com/">
+ <link href="https://fonts.googleapis.com/css2?family=Handlee&amp;family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet">
+
+
+    <!--Login Style Link-->
+    <link rel="stylesheet" href="assets/css/login.css" />
+    <title>AgricEase</title>
+</head>
+<body>
+    <form class="form" method="post" id="mainForm" >
+        <p class="title text-3xl">Let's Get to know your taste</p>
+        <p class="message">What Kind of Product do you want to purchase from <b>AgricEase</b></p>
+        <label style="font-size: 1.4rem; position: relative;" class="animate__animated animate__backInLeft"> Vegetable Crops🌾
+            <input required="" placeholder="" type="checkbox"  id="surveyText" name="surveyText" style="position: absolute; right: 0; margin-top: 12px;">
+            
+        </label>
+
+        <label style="font-size: 1.4rem; position: relative;" class="animate__animated animate__backInRight"> Diary Products 
+            <input required="" placeholder="" type="checkbox"  id="surveyText" name="surveyText" style="position: absolute; right: 0; margin-top: 12px;">
+            
+        </label>
+        <label style="font-size: 1.4rem; position: relative;" class="animate__animated animate__backInLeft"> Organic products
+            <input required="" placeholder="" type="checkbox"  id="surveyText" name="surveyText" style="position: absolute; right: 0; margin-top: 12px;">
+            
+        </label>
+
+        <label style="font-size: 1.4rem; position: relative;" class="animate__animated animate__backInRight"> Livestocks and animal
+            <input required="" placeholder="" type="checkbox"  id="surveyText" name="surveyText" style="position: absolute; right: 0; margin-top: 12px;">
+            
+        </label>
+
+        <label style="font-size: 1.4rem; position: relative;" class="animate__animated animate__backInLeft"> Fruits
+            <input required="" placeholder="" type="checkbox"  id="surveyText" name="surveyText" style="position: absolute; right: 0; margin-top: 12px;">
+            
+        </label>
+        <label style="font-size: 1.4rem; position: relative;" class="animate__animated animate__backInRight"> Fertilizers 
+            <input required="" placeholder="" type="checkbox"  id="surveyText" name="surveyText" style="position: absolute; right: 0; margin-top: 12px;">
+            
+        </label>
+
+        <label style="font-size: 1.4rem; position: relative;" class="animate__animated animate__backInLeft"> Cotton
+            <input required="" placeholder="" type="checkbox"  id="surveyText" name="surveyText" style="position: absolute; right: 0; margin-top: 12px;">
+            
+        </label>
+        <button class="submit" id="surveyNext">Next</button>
+        
+    </form>
+</body>
+    <script type="module" src="Authentication/login.js"></script>
+    <script src="assets/js/index.js"></script>
+</html>
