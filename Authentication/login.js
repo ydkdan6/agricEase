@@ -32,6 +32,8 @@ let LoginUser = evt => {
     const user = credentials.user;
     console.log(user);
     alert(user.email + " Login Successfully!")
+
+    window.location.href = "surveyPage.html";
   })
   .catch((error) => {
     alert(error.message);
