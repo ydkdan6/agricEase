@@ -8,3 +8,23 @@ toggleBox.addEventListener('click', () => {
         password.type = "text";
     }
 })
+
+//Survey Form checkbox get Cookies
+function saveCheckbox() {
+    // Get the element by the id
+    const checkbox = document.getElementById("surveyText");
+
+    // Check if the checkbox has been checked
+    const isChecked = checkbox.checked;
+
+    if (isChecked) {
+        // Save the checkbox state in the cookie
+        document.cookie = "checkedBox=" + isChecked;
+        alert("Product State Has Been Saved");
+    } else {
+        // Alert the user to select the checkbox
+        alert("Please select At Least One Product");
+    }
+}
+
+
