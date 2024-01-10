@@ -27,4 +27,16 @@ function saveCheckbox() {
     }
 }
 
+//Function for the navigation bar redirection
+function showPage(pageId) {
+    // Hide all sections
+    document.querySelectorAll('section').forEach(function(section) {
+      section.style.display = 'none';
+    });
+
+    // Show the selected section
+    document.getElementById(pageId).style.display = 'block';
+  }
+
+
 

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Favicon -->
+<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+<!--<link rel="manifest" href="/site.webmanifest"> -->
+
+
+<!-- Animate style CDN-->
+<link
+rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+/>
+
+<!-- fonts -->
+<link rel="preconnect" href="https://fonts.gstatic.com/">
+<link href="https://fonts.googleapis.com/css2?family=Handlee&amp;family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet">
+
+
+<title>AgricEase</title>
+
+<style>
+         body {
+    
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+    }
+
+    header {
+        display: flex;
+        justify-content: space-around;
+        position: relative;
+      background-color: rgb(8, 77, 17);
+      padding: 10px;
+      color: white;
+      text-align: center;
+      height: 4.1rem;
+    }
+
+    .image-header {
+        position: absolute;
+        left: 0;
+        margin-left: 2rem;
+    }
+
+   /*.header-agric{
+      position: absolute;
+      right: 0;
+      padding-right: 10px;
+    } */
+
+    nav {
+      background-color: #f1f1f1;
+      overflow: hidden;
+    }
+
+    nav button {
+      float: left;
+      display: block;
+      color: #333;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: 17px;
+      border: none;
+      cursor: pointer;
+    }
+
+    nav button:hover {
+        border-bottom: 1px solid rgb(8, 77, 17);
+        transition: 1s ease-in;
+    }
+
+    .logout {
+      position: absolute;
+      right: 0;
+      padding-right: 25px;
+    }
+
+    section {
+      padding: 20px;
+    }
+
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 10px;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+
+    /* Responsive styles */
+    @media screen and (max-width: 600px) {
+      nav {
+        text-align: center;
+        position: fixed;
+        width: 100%;
+        bottom: 0;
+      }
+
+      nav button {
+        
+        text-align: center;
+        float: none;
+        display: inline-flex;
+        justify-content: center;
+        margin-right: 20px;
+        width: 20%; /* Set the width to control the number of buttons per row */
+        box-sizing: border-box;
+      }
+
+      section {
+        padding: 10px;
+      }
+
+
+    }
+
+    @media (max-width: 800px) {
+      header {
+        display: flex;
+      }
+
+      .header-agric{
+      position: absolute;
+      right: 0;
+      padding-right: 16px;
+    }
+
+
+    }
+
+
+</style>
+</head>
+<body>
+
+  <header>
+    <img src="assets/images/AfriEase.png" alt="AgricEase" class="image-header" style="width: 5rem; height: 4rem; border-radius: 50%;" />
+    <h1 class="header-agric">AgricEase</h1>
+     </header>
+
+  <nav>
+    <button onclick="showPage('dashboard')"><svg xmlns="http://www.w3.org/2000svg" width="16" height="16" fill="currentColor" class="bi bi-speedometer2" viewbox="0 0 16 16 ">
+      <path d="M8 4a.5.5 0 0 1 .5.5V6a.5.5 0 0 1-1 0V4.5A.5.5 0 0 1 8 4zM3.732 5.732a5.5 0 0 1 .707 01.915.914a.5.5 0 1 1-.708.708l-.914-.915a"  
+    </svg>
+    </button>
+    <button onclick="showPage('products')">Products</button>
+    <button onclick="showPage('transactions')">Transaction History</button>
+    <button onclick="showPage('logout')" class="logout">Logout</button>
+  </nav>
+
+  <section id="dashboard">
+    <h2>Welcome to the Dashboard</h2>
+    <p>This is the main dashboard page.</p>
+  </section>
+
+  <section id="products" style="display: none;">
+    <h2>Products</h2>
+    <p>Here is the page for managing products.</p>
+  </section>
+
+  <section id="transactions" style="display: none;">
+    <h2>Transaction History</h2>
+    <p>View your transaction history here.</p>
+  </section>
+
+  <section id="logout" style="display: none;">
+    <h2>Logout</h2>
+    <p>You have been logged out.</p>
+  </section>
+
+</body>
+<script src="assets/js/index.js"></script>
+</html>
